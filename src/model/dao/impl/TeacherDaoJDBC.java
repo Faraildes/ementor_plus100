@@ -65,7 +65,7 @@ public class TeacherDaoJDBC implements TeacherDao {
 				obj.setName(rs.getString("Name"));
 				obj.setCpf(rs.getString("Cpf"));
 				obj.setPhone(rs.getString("Phone"));
-				obj.setAdmissionDate(rs.getDate("AdmissionDate"));				
+				obj.setAdmissionDate(new java.util.Date(rs.getTimestamp("AdmissionDate").getTime()));				
 				obj.setSalary(rs.getDouble("Salary"));
 				obj.setChief(rs.getString("Chief"));
 				obj.setCoordinator(rs.getString("Coordinator"));
